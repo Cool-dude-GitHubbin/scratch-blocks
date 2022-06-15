@@ -216,18 +216,49 @@ Blockly.Blocks['motion_gotoxy'] = {
   }
 };
 
-Blockly.Blocks['motion_goto'] = {
+Blockly.Blocks['motion_glidesecsby'] = {
   /**
-   * Block to go to a menu item.
+   * Block to go to X, Y.
    * @this Blockly.Block
    */
   init: function() {
     this.jsonInit({
-      "message0": Blockly.Msg.MOTION_GOTO,
+      "message0": Blockly.Msg.MOTION_GLIDESECSBYXY,
       "args0": [
         {
           "type": "input_value",
-          "name": "TO"
+          "name": "SECS"
+        },
+        {
+          "type": "input_value",
+          "name": "X"
+        },
+        {
+          "type": "input_value",
+          "name": "Y"
+        }
+      ],
+      "category": Blockly.Categories.motion,
+      "extensions": ["colours_motion", "shape_statement"]
+  }
+};
+
+Blockly.Blocks['motion_pointtowardsxy'] = {
+  /**
+   * Block to go to X, Y.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.MOTION_POINTTOWARDSXY,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "X"
+        },
+        {
+          "type": "input_value",
+          "name": "Y"
         }
       ],
       "category": Blockly.Categories.motion,
